@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+               
+        
+  <div class="container-fluid">
+      <h1>Formulario Evaluacion 1</h1><br>
+                <!-- En action es a donde vamos a enviar el dato a "servlets" -->
+                <form action="servlets" method="POST" id="formulario">
+
+                <div class="col-md-3 mb-3">
+                     <label for="run">Rut:</label>
+                     <input type="text" class="form-control" id="rut" name="rut" required oninput="checkRut(this)">          
+ 
+                      <label for="nombre">Nombre:</label>
+                     <input type="text" class="form-control" id="nombre" name="nombre" onkeypress="return soloLetras(event)">  
+
+
+                      <label for="apellido">Apellido</label>
+                     <input type="text" class="form-control" id="apellido" name="apellido" onkeypress="return soloLetras(event)"> 
+
+
+                       <label for="direccion">Dirección:</label>
+                     <input type="text" class="form-control" id="direccion" name="direccion">           
+
+                      <label for="comuna">Comuna:</label>
+                     <input type="text" class="form-control" id="comuna" name="comuna" onkeypress="return soloLetras(event)">   
+
+
+                      <label for="fechaNacimiento">Fecha de nacimiento:</label>
+                     <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento" required ><br>     
+
+                </div>                
+                
+
+            <!-- INICIO GENERO -->
+            <h4>Seleccionar genero</h4><br>
+            <fieldset class="form-group">
+             <div class="row">
+                 <div class="col-sm-10">
+                 <div class="form-check">
+                   <input class="form-check-input" type="radio" name="genero" id="hombre" value="hombre">
+                   <label class="form-check-label" for="hombre">Hombre</label><br>
+
+                   <input class="form-check-input" type="radio" name="genero" id="mujer" value="mujer">
+                   <label class="form-check-label" for="mujer">Mujer</label>
+                 </div>
+               </div>
+             </div>
+           </fieldset>            
+           <br>
+         <!-- FIN GENERO -->
+
+
+            <!-- REDES SOCIALES  -->
+            <h4>Selecciona las redes sociales que utilizas</h4><br>
+            <div class="form-group row">
+              <div class="col-sm-10">
+                <div class="checkboxs" >
+                  <input  type="checkbox" name="redesSociales" value="Facebook" id="Facebook">
+                  <label class="form-check-label" for="facebook">Facebook</label><br>
+
+                  <input  type="checkbox" name="redesSociales" value="Twitter" id="Twitter">
+                  <label class="form-check-label" for="twitter">Twitter</label><br>
+
+                  <input  type="checkbox" name="redesSociales" value="Instagram" id="Instagram">
+                  <label class="form-check-label" for="instagram">Instagram</label><br>
+                  
+                  
+                  <input type="checkbox" name="redesSociales" value="Tiktok" id="Tiktok">
+                  <label class="form-check-label" for="tiktok">Tiktok</label><br>
+                
+                                  <br>
+
+                 <button type="submit" class="btn btn-primary"  name="enviar" id="enviar" value="enviar"/> Enviar</button>
+
+                
+                
+                </div>
+                  <br>
+
+              </div>
+            </div>
+           <!-- FIN REDES SOCIALES  -->
+           <br>
+
+
+        </form>
+                
+                
+    <script src="js/validarFormulario.js" type="text/javascript"></script>
+  </div>      
+        
+    </body>
+</html>
