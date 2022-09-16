@@ -30,54 +30,12 @@ public class servlets extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        
-        
-        String rut = request.getParameter("rut");
-        String nombre = request.getParameter("nombre");
-        String apellido = request.getParameter("apellido");
-        String direccion = request.getParameter("direccion");
-        String comuna = request.getParameter("comuna");
-        
-        String fechaNacimiento = request.getParameter("fechaNacimiento");
-        
-        String genero = request.getParameter("genero");
-        String[] redesSociales = request.getParameterValues("redesSociales");
+       
       
 
         //aqui declara un objeto de lo que es printwriter para poner lenguaje HTML        
         
-        try ( PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            
-                    
-
-            out.println("<link href=\"css/bootstrap.min.css\" rel=\"stylesheet\" type=\"text/css\"/>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Respuestas</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<div class=\"container-fluid\">");
-            out.println("<h3>Datos ingresados Correctamente: </h3><br>");
-            out.println("<label>Rut:"+ " " + rut +"</label><br>");
-            out.println("<label>Nombres:"+ " " + nombre +"</label><br>");
-            out.println("<label>Apellido:"+ " " + apellido +"</label><br>");
-            out.println("<label>Dirección:"+ " " + direccion +"</label><br>");
-            out.println("<label>Comuna:"+ " " + comuna +"</label><br>");
-            out.println("<label>Fecha de nacimiento:"+ " " + fechaNacimiento +"</label><br>");
-            out.println("<label>Genero:"+ " " + genero +"</label><br>");
-            out.println("<label>Redes Sociales:</label><br>");
-            for (String redesSociale : redesSociales) {
-                out.println("<li>"+" " + redesSociale + "</li>");
-            }
-             out.println("</div>");
-
-
-            out.println("</body>");
-            out.println("</html>");
-        }
+    
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -106,7 +64,55 @@ public class servlets extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+         response.setContentType("text/html;charset=UTF-8");
+        String rut = request.getParameter("rut");
+        String nombre = request.getParameter("nombre");
+        String apellido = request.getParameter("apellido");
+        String direccion = request.getParameter("direccion");
+        String comuna = request.getParameter("comuna");
+        
+        String fechaNacimiento = request.getParameter("fechaNacimiento");
+        
+        String genero = request.getParameter("genero");
+        String[] redesSociales = request.getParameterValues("redesSociales");
+        
+        
         processRequest(request, response);
+            try ( PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+
+                    
+
+            out.println("<link href=\"css/bootstrap.min.css\" rel=\"stylesheet\" type=\"text/css\"/>");
+            
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Respuestas</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<div class=\"container-fluid\">");
+            out.println("<h3>Datos ingresados Correctamente: </h3><br>");
+            out.println("<label>Rut:"+ " " + rut +"</label><br>");
+            out.println("<label>Nombres:"+ " " + nombre +"</label><br>");
+            out.println("<label>Apellido:"+ " " + apellido +"</label><br>");
+            out.println("<label>Dirección:"+ " " + direccion +"</label><br>");
+            out.println("<label>Comuna:"+ " " + comuna +"</label><br>");
+            out.println("<label>Fecha de nacimiento:"+ " " + fechaNacimiento +"</label><br>");
+            out.println("<label>Genero:"+ " " + genero +"</label><br>");
+            out.println("<label>Redes Sociales:</label><br>");
+            for (String redesSociale : redesSociales) {
+                out.println("<li>"+" " + redesSociale + "</li>");
+            }
+             out.println("</div>");
+
+
+            out.println("</body>");
+            out.println("</html>");
+        }
+            
+            
     }
 
     /**
