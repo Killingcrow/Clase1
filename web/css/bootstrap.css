@@ -5210,7 +5210,7 @@ textarea.form-control-lg {
   --bs-toast-spacing: 1.5rem;
   --bs-toast-max-width: 350px;
   --bs-toast-font-size: 0.875rem;
-  --bs-toast-color: ;
+  --bs-toast-color:;
   --bs-toast-bg: rgba(255, 255, 255, 0.85);
   --bs-toast-border-width: 1px;
   --bs-toast-border-color: var(--bs-border-color-translucent);
@@ -6114,7 +6114,7 @@ textarea.form-control-lg {
   --bs-offcanvas-height: 30vh;
   --bs-offcanvas-padding-x: 1rem;
   --bs-offcanvas-padding-y: 1rem;
-  --bs-offcanvas-color: ;
+  --bs-offcanvas-color:1rem;
   --bs-offcanvas-bg: #fff;
   --bs-offcanvas-border-width: 1px;
   --bs-offcanvas-border-color: var(--bs-border-color-translucent);
